@@ -1,0 +1,87 @@
+<html>
+
+<head>
+    <title>demo jquery</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" type="text/javascript"></script>
+    <script Type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#in1").focus(function () {
+                $(this).css("background-color", "lightgray");
+            });
+            $("#in2").focus(function () {
+                $(this).css("background-color", "lightgray");
+            });
+            $("#in3").focus(function () {
+                $(this).css("background-color", "lightgray");
+            });
+            $("#in4").blur(function () {
+                $(this).css("background-color", "WhiteSmoke");
+            });
+            $("#in5").keypress(function () {
+                alert($(this).val());
+            });
+            $("#in6").keyup(function () {
+                alert($(this).val());
+            });
+            window.onload = () =>{
+            document.getElementById("in1").focus();
+        }
+        $("#IN7").click(function(){
+            alert("YOU ARE SUCCESSFULLY FILL THIS FORM...")
+        })
+        });
+    </script>
+    <style>
+        td{
+            font-size: 3vh;
+        }
+
+        input {
+            margin-left: 10px;
+            font-size: 2.5vh;
+        }
+        fieldset{
+            width: max-content;
+            border: 5px solid gray;
+            background-color: lightblue;
+        }
+    </style>
+</head>    
+</script>
+</head>
+<body>
+    <fieldset>
+    <table>
+        <tr>
+            <td>FIRST NAME :</td>
+            <td><input type="text" id="in1" placeholder="ENTER FIRST NAME"/></td>
+        </tr>
+        <tr>
+            <td>MIDDLE NAME :</td>
+            <td><input type="text" id="in2" placeholder="ENTER MIDDLE NAME" /></td>
+        </tr>
+        <tr>
+            <td>LAST NAME :</td>
+            <td><input type="text" id="in3" placeholder="ENTER LAST NAME" /></td>
+        </tr>
+        <tr>
+            <td>MOB. NO. :</td>
+            <td><input type="tel" id="in4" placeholder="ENTER MOBILE NUMBER"  value="+91" pattern="^((\+91[0-9]{10})|(0[0-9]10}))$"></td>
+        </tr>
+        <tr>
+            <td>PASSWORD :</td>
+            <td><input type="password" id="in5" placeholder="ENTER PASSWORD" /></td>
+        </tr>
+        <tr>
+            <td>EMIL ID :</td>
+            <td><input type="email" id="in6" placeholder="ENTER EMAIL ID" /></td>
+        </tr>
+    </table>
+    <center>
+    <input type="button" value="SUBMIT" id="IN7">
+    </center>
+    </fieldset>
+</body>
+</html>
